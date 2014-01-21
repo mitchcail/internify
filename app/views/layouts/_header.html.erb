@@ -1,0 +1,27 @@
+<!-- Start of Navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <%= link_to "Internify", root_path, class:"navbar-brand text-muted" %>
+	    
+	    <div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><%= link_to 'About', about_path %></li>
+	        <li class="dropdown">
+	          <a data-toggle="dropdown" data-target="#">Enter Here<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">About Treehouse</a></li>
+	            <li><a href="#">Video Library</a></li>
+	            <li><a href="#">Learning Adventures</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Plans &amp; Pricing</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</div><!-- End navbar -->

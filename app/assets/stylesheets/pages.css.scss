@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 body {
 	
 	background-color: #ecf0f1;
+	font-size: 15px;
 }
 
 .jumbotron {
@@ -18,4 +18,22 @@ body {
 .navbar-inverse {
   background-color: #0E1206;
   border-color: #080808;
+}
+
+.navbar-brand {
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 15px;
 }

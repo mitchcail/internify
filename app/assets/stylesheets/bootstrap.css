@@ -4489,8 +4489,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 35px;
 }
 
 .navbar-brand:hover,

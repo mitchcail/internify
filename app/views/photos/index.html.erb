@@ -19,21 +19,22 @@
       <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-default btn-lg'%>
     </div>
   <% end %>
-    <div id= 'photos' class="transitions-enabled">
-        <% @photos.each do |photo| %>
-        <div class = 'box panel panel-success'>
-         
-          <%= link_to image_tag(photo.image.url(:thumb)), photo %>
-          <div class='panel-body'>
-            <%= photo.description %>
-          </div>
-          <div class='panel-footer'>
-            <strong><%= photo.user.email %></strong>
-          </div>
+  </br>
+  <div id= 'photos' class="transitions-enabled">
+      <% @photos.each do |photo| %>
+      <div class = 'box panel panel-success'>
+       
+        <%= link_to image_tag(photo.image.url(:thumb)), photo %>
+        <div class='panel-body'>
+          <%= photo.description %>
         </div>
-        
-      <% end %>
-    </div>
+        <div class='panel-footer'>
+          <strong><%= photo.user.email %></strong>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>
   </div>
 </div>
 

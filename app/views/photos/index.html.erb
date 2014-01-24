@@ -1,27 +1,32 @@
 <%= render 'pages/home' %>
+<div class='container' id = "about">
+  <p><h1><strong>I LOVE PROGRAMING...</strong></h1></p>
+  <p><h3>And I know that Shopify is filled with extremely talented developers who feel the same way. It would be an amazing experience to be able to learn to program along side some of the best coders in the industry. I love Shopify because of everything you do outside of work. From your monthly Python and Ruby meetups I've been able to connect with tons of like minded developers around Ottawa. I'm far from the best programer in the world, but I love to spend my free time playing around with new concepts and trying to create new projects. Having the opportunity to spend my days hacking on projects along side some of the best developers in the industry would be a dream come true for me.</h3></p>
+  </br>
+  </br>
+</div>
 
-<div class='container'>
-<% if user_signed_in? %>
-  <%= link_to 'New Photo', new_photo_path %>
-<% end %>
-  <div id= 'photos' class="transitions-enabled">
-      <% @photos.each do |photo| %>
-      <div class = 'box panel panel-default'>
-       
-        <%= link_to image_tag(photo.image.url(:thumb)), photo %>
-        <div class='panel-body'>
-          <%= photo.description %>
+<div class="jumbotron" id = "project">
+  <div class='container'>
+  <% if user_signed_in? %>
+    <%= link_to 'New Photo', new_photo_path %>
+    <br>
+  <% end %>
+    <div id= 'photos' class="transitions-enabled">
+        <% @photos.each do |photo| %>
+        <div class = 'box panel panel-success'>
+         
+          <%= link_to image_tag(photo.image.url(:thumb)), photo %>
+          <div class='panel-body'>
+            <%= photo.description %>
+          </div>
+          <div class='panel-footer'>
+            <strong><%= photo.user.email %></strong>
+          </div>
         </div>
-        <div class='panel-footer'>
-          <%= photo.user.email %>
-          <% if photo.user == current_user %>
-            <%= link_to 'Edit', edit_photo_path(photo) %>
-            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-        </div>
-      </div>
-      
-    <% end %>
+        
+      <% end %>
+    </div>
   </div>
 </div>
 

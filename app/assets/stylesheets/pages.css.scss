@@ -4,7 +4,7 @@
 
 body {
 	
-	background-color: #ecf0f1;
+	background-color: #bdc3c7;
 	font-size: 15px;
 	padding-top: 60px;
 }
@@ -37,4 +37,11 @@ body {
 .navbar-nav > li > a {
     padding-top: 20px;
     padding-bottom: 15px;
+}
+
+#about h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    color: inherit;
 }

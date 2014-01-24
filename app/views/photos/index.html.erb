@@ -1,22 +1,27 @@
+<%= render 'pages/home' %>
+
+<div class='container'>
 <% if user_signed_in? %>
   <%= link_to 'New Photo', new_photo_path %>
 <% end %>
-
-<div id= 'photos' class="transitions-enabled">
-    <% @photos.each do |photo| %>
-    <div class = 'box panel panel-default'>
-      <%= image_tag photo.image.url(:thumb) %>
-      <div class='panel-body'>
-        <%= photo.description %>
-        <%= photo.user.email %>
-        <%= link_to 'Show', photo %>
-        <% if photo.user == current_user %>
-          <%= link_to 'Edit', edit_photo_path(photo) %>
-          <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
+  <div id= 'photos' class="transitions-enabled">
+      <% @photos.each do |photo| %>
+      <div class = 'box panel panel-default'>
+       
+        <%= link_to image_tag(photo.image.url(:thumb)), photo %>
+        <div class='panel-body'>
+          <%= photo.description %>
+        </div>
+        <div class='panel-footer'>
+          <%= photo.user.email %>
+          <% if photo.user == current_user %>
+            <%= link_to 'Edit', edit_photo_path(photo) %>
+            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    
-  <% end %>
+      
+    <% end %>
+  </div>
 </div>
 

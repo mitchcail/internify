@@ -10,8 +10,8 @@
 <div class="jumbotron" id = "project">
   <div class='container'>
   <% if user_signed_in? %>
-    <%= link_to 'New Photo', new_photo_path %>
-    <br>
+    <h2>Share your Photos</h3>
+    <h3><%= link_to 'New Photo', new_photo_path %></h3>
   <% else %>
     <div class="jumbotron">
       <h2>Without further ado, here is the application I built for you</h2>
